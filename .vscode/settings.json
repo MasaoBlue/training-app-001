@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "java.server.launchMode": "Standard",
+  "java.semanticHighlighting.enabled": true,
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

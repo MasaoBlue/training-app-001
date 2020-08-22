@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: ./server
+      args:
+        VERSION: 3.12
+    ports:
+      - 8080:8080
+    environment:
+      HISTFILE: /root/.history/.bash_history
+      TZ: Asia/Tokyo
+    tty: true
+    volumes:
+      - ..:/workspace
+      - maven_local_repository_volume:/root/.m2
+      - bash_history_volume:/root/.history
+
+volumes:
+  maven_local_repository_volume:
+  bash_history_volume:

@@ -5,10 +5,15 @@
 
   <groupId>com.example</groupId>
   <artifactId>training-app-001</artifactId>
-  <version>0.1.0</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+
   <modules>
+    <module>training-app-001-backend</module>
   </modules>
 
 </project>
