@@ -15,4 +15,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
 #     && apk add --no-cache <your-package-list-here>
 
 RUN apk update \
-  && apk add --no-cache npm openjdk8
+  && apk add --no-cache npm openjdk8 maven
+
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
