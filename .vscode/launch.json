@@ -10,6 +10,29 @@
       "request": "launch",
       "mainClass": "com.example.trainingapp.TrainingApp001BackendApplication",
       "projectName": "training-app-001-backend"
+    },
+    {
+      "type": "node",
+      "name": "Launch Frontend",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "args": [
+        "start"
+      ],
+      "cwd": "${workspaceRoot}/training-app-001-frontend",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/training-app-001-frontend/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
     }
   ]
 }

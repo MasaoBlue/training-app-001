@@ -7,15 +7,22 @@ services:
         VERSION: 3.12
     ports:
       - 8080:8080
+      - 3000:3000
     environment:
       HISTFILE: /root/.history/.bash_history
       TZ: Asia/Tokyo
     tty: true
     volumes:
-      - ..:/workspace
+      - ..:/workspace:cached
       - maven_local_repository_volume:/root/.m2
       - bash_history_volume:/root/.history
+      - vscode_extensions_volume:/root/.vscode-server/extensions
+      - frontend_node_modules_volume:/workspace/training-app-001-frontend/node_modules
+      - global_node_modules_volume:/usr/lib/node_modules
 
 volumes:
   maven_local_repository_volume:
   bash_history_volume:
+  vscode_extensions_volume:
+  frontend_node_modules_volume:
+  global_node_modules_volume:
